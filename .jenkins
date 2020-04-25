@@ -1,0 +1,54 @@
+pipeline{
+    agent any
+    stages{
+      stage('Build') {
+      	steps{
+      		bat echo "executing Build job"
+      	}
+    }
+      stage('Deploy to Dev'){
+      	steps{
+      		bat echo "executing Deploy to DEV"
+      	}
+    }
+      stage('Unit tests'){
+        steps{
+            bat echo "run unit tests"
+        }
+    }
+      stage('Black box tests'){
+        steps{
+            bat echo "run black box tests"
+        }
+      }
+      stage('Monkey Testing'){
+        steps{
+            bat echo "executing monkey testing"
+        }
+      }
+      stage('Integrationg testing'){
+        steps{
+            bat echo "executing integration testing"
+        }
+      }
+      stage('Deploying to DevOps env'){
+        steps{
+            bat echo "deploy to devops team"
+        }
+      }
+  }	
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+

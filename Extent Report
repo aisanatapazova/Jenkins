@@ -1,0 +1,35 @@
+pipeline{
+    agent any
+    stages{
+      stage('Build') {
+      	steps{
+      		bat echo "executing Build job"
+      	}
+    }
+      stage('Deploy to Dev'){
+      	steps{
+      		bat echo "executing Deploy to DEV"
+      	}
+    }
+      stage('Unit tests'){
+        steps{
+            bat echo "run unit tests"
+        }
+    }
+
+  }	
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
